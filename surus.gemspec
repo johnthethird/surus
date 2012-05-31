@@ -23,10 +23,11 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_dependency 'pg'
+  # Dont depend on pg so JRuby can use it
+  # s.add_dependency 'pg'
   s.add_dependency 'activerecord', ">= 3.1.0"
-  
+
   s.add_development_dependency 'rspec', "~> 2.8.0"
   s.add_development_dependency 'guard', ">= 0.10.0"
-  s.add_development_dependency 'guard-rspec', ">= 0.6.0"  
+  s.add_development_dependency 'guard-rspec', ">= 0.6.0"
 end
