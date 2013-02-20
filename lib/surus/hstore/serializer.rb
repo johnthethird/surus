@@ -16,6 +16,7 @@ module Surus
 
       def load(string)
         return unless string
+        return string unless string.is_a?(String)
         stringified_hash = string.scan(KEY_VALUE_REGEX).each_with_object({}) do |key_value, hash|
           key, value = key_value
           key = unescape(key)
